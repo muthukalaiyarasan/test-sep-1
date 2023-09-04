@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1> 1</h1>
+<script>
+ function vowel(name){
+		name=name.toLowerCase()
+		let count=0;
+		for(i=0;i<name.length;i++){
+		if(name[i]==="a"||name[i]==="e"||name[i]==="i"||name[i]==="o"||name[i]==="u"){
+			count++
+		}
+		}
+		return count
+	}
+	
+	function check(){
+		
+		let a=vowel("Fabevy");
+		let b=vowel("kalaiyarasan");
+		
+		if(a>b){
+			console.log(`Fabevy vowel high count`)
+		}
+		else{
+			console.log(`kalai vowel high count`)
+		}
+	}
+	check()
+	 
+	 
+		   
+</script>
+<h1> 2</h1>
+<script>
+	let num =0;
+	console.log(num++)
+	console.log(num++)
+	console.log(num++) //output:0 1 2
+</script>
+<h1> 3</h1>
+<script>
+	var obj = {a:1};
+	let emp = obj;
+	obj=null;
+	console.log(obj,emp) //output:null {a: 1}
+</script>
+<h1>4</h1>
+<script>
+	console.log(add()); //output:error
+const add = () =>{
+return a+b;
+}
+</script>
+<h1> 5</h1>
+<script>
+	function mul(c,d){
+return c*d
+}		
+mul(8)
+//1]output is error
+//2] expected output:
+function mul(d,f=0){
+return d*f
+}
+mul(8) 
+//output0
+//3]this mechanism is used in default param 
+	//correct code
+	function mul(d,f=0){
+	console.log(d*f)
+	}
+	mul(8) //output:0
+</script>
+<h1>6</h1>
+<script>
+	let data = {name: "ES6"}
+
+function check(value){
+if(value===data){
+console.log("Both are same");
+}
+else {
+console.log("not same")
+}
+}
+check({name: "ES6"})       //output:not sam
+</script>
+<h1>7</h1>
+<script>
+		let e = {name:"ES6"}
+		e.c = 25;
+		e.name = "React"
+		console.log(e); //output:{name: 'React', c: 25}
+</script>
+<h1>8</h1>
+<script>
+	//How to avoid shallow copy? shallow copy is orginal array values assign another values any changes in all values that occur all values changed in does not change.
+	//How many ways are there? there are three way *spread operator,*JSON stringify,*object assign.
+	//spread operator
+	let x={a:1,b:2}
+	let y={...x}
+	y.c=3
+	console.log(x,y);       //output:{a: 1, b: 2} {a: 1, b: 2, c: 3}
+	document.write(x,y);
+</script>
+<h1>9</h1>
+<script>
+	let name=[{name:"a" ,age:23},{name:"b" ,age:15},{name:"c" ,age:45},{name:"d" ,age:34}]
+	let z=name.sort((a,b)=>{
+	return a.age-b.age
+	})
+	console.log(z);   //output:(4) [{…}, {…}, {…}, {…}]0: {name: 'b', age: 15}1:{name: 'a', age: 23}2: {name: 'd', age: 34}3: {name: 'c', age: 45}
+</script>
+<h1>10</h1>
+<script>
+	let a=[{name: "Ganesh",position: "fresher"},
+	{name: "Hariharan",position: "junior"},
+	{name: "Samy",position: "senior"},
+	{name: "Mari",position: "junior"}]
+	
+	let b=a.filter((value,index)=>{
+	return value.position=="junior";
+	})
+	let c=b.map((value,index)=>{
+	return value.name;
+	})
+	console.log(c); //output: ['Hariharan', 'Mari']
+</script>
+<h1>11</h1>
+<script>
+	localStorage.setItem("local",JSON.stringify([{name:"a" ,age:23},{name:"b" ,age:15},{name:"c" ,age:45},{name:"d" ,age:34}]))	
+JSON.parse(localStorage.getItem("locol"))
+</script>
+<h1>12	</h1>
+<script>
+	//map:map method it used array and create a new array changed value
+	
+	//filter:filter method is create a new array select one element satisfi a condition
+</script>
+</body>
+</html>
